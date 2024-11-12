@@ -38,6 +38,8 @@ body {
 }
 
 .header-content h1 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
     color: white;
     text-shadow: rgba(0, 0, 0, 0.9);
     font-size: 4em;
@@ -45,6 +47,7 @@ body {
 }
 
 .header-content h1 img {
+    transform: translateY(15px);
     width: 100px;
     height: 100px;
 }
