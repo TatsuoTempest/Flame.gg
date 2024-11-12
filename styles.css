@@ -1,0 +1,273 @@
+/* Resetando o estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo e fundo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    cursor: url('./imgs/cursors/cursor.png'), auto;
+}
+
+/* Seção do Header com imagem de fundo */
+.header-section {
+    background-image: url('./imgs/background/work-wallpaper\ \(24\).jpg'); /* Substitua pelo URL da sua imagem */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh; /* O header ocupa 100% da altura da janela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-position-x: 20px;
+}
+
+.header-content {
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-content h1 {
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.9);
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.header-content h1 img {
+    width: 100px;
+    height: 100px;
+}
+
+.header-content p {
+    font-size: 1.5em;
+    max-width: 60%;
+    margin-bottom: 20px;
+}
+
+.btn-transparent {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center; /* Alinha o ícone e o texto verticalmente */
+    gap: 8px; /* Espaço entre o ícone e o texto */
+}
+
+.btn-transparent img.icon {
+    width: 40px; /* Define o tamanho do ícone */
+    height: 30px;
+}
+
+.btn-transparent:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Menu de navegação fixa */
+nav {
+    position: fixed; /* Fixa a navegação no topo da página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #260415; /* Cor do fundo do menu */
+    padding: 15px 0;
+    z-index: 1000; /* Garante que o menu fique sobre outros conteúdos */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Centraliza os itens dentro da lista */
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px; /* Espaço entre os itens do menu */
+}
+
+nav ul li a {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Botão "Adicione seu Servidor" posicionado à direita */
+nav .btn-style {
+    position: absolute; /* Posiciona o botão fora do fluxo normal */
+    right: 20px; /* Coloca o botão 20px da borda direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição do botão verticalmente */
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para o botão */
+nav .btn-style:hover {
+    background-color: #5a6fb6; /* Cor de fundo do botão quando hover */
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    padding: 20px;
+    background-color: #220413;
+}
+
+main h2 {
+    color: #f4f4f9;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* Estilos das Seções */
+.server-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Separador entre as seções */
+.section-separator {
+    margin: 40px 0;
+    height: 2px;
+    background-color: white; /* Cor do separador */
+}
+
+.tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 8px;
+    background-color: #260415;
+    color: white;
+    font-size: 0.6em;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Lista de servidores */
+.server-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1200px;
+}
+
+/* Card de servidor */
+.server-card {
+    background-color: #f9431c;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.server-card:hover {
+    transform: translateY(-5px);
+}
+
+.server-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.server-info {
+    padding: 20px;
+}
+
+.server-info h3 {
+    color: #ffc09f;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.server-info p {
+    color: #ffc09f;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+/* Estilo do botão "Entrar no Servidor" */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7289da;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #5a6fb6;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #341c2c;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Exibir os cards de servidores em uma coluna em telas menores */
+    .server-list {
+        grid-template-columns: 1fr; /* Muda para uma coluna */
+    }
+
+    /* Ajustar tamanho da fonte e espaçamento dos títulos e botões */
+    .header-content h1 {
+        font-size: 2.5em;
+    }
+
+    .header-content h1 img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .header-content p {
+        font-size: 1.2em;
+        max-width: 90%;
+    }
+
+    .btn-transparent {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .btn-transparent img.icon {
+        width: 20px;  /* Reduz o tamanho do ícone */
+        height: 20px; /* Mantém o ícone proporcional */
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Servidor - FlameHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menu de navegação fixa -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">Sobre</a></li>
+        </ul>
+        <a href="#" class="btn-style">Adicionar seu Servidor</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="server-section">
+            <h2>Adicionar Seu Servidor</h2>
+            <p>Conecte sua conta do Discord e adicione seu servidor ao FlameHub!</p>
+
+            <!-- Formulário de Adicionar Servidor -->
+            <form id="server-form">
+                <label for="server-name">Nome do Servidor:</label>
+                <input type="text" id="server-name" name="server-name" required>
+
+                <label for="server-link">Link do Servidor (Discord):</label>
+                <input type="url" id="server-link" name="server-link" required>
+
+                <label for="server-image">Imagem do Servidor (URL ou Upload):</label>
+                <input type="url" id="server-image" name="server-image" placeholder="URL da imagem" required>
+
+                <button type="submit" class="btn">Adicionar Servidor</button>
+            </form>
+
+            <!-- Área para o botão de login com Discord -->
+            <div class="discord-login">
+                <h3>Conecte sua conta do Discord:</h3>
+                <a href="https://discord.com/oauth2/authorize?client_id=SEU_CLIENT_ID&redirect_uri=SEU_REDIRECT_URI&response_type=code&scope=identify+guilds" class="btn btn-discord">
+                    Conectar com Discord
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Divulgação de Servidores Discord</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
